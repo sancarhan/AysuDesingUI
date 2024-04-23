@@ -1,0 +1,297 @@
+/* ABOUT */
+.ab-container {
+    font-family: 'Comfortaa', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background: url(../İMG/background.png);
+    background-attachment: fixed;
+    overflow-x: hidden;
+    padding-top: 83px;
+    
+  }
+  
+  .profile-card,
+  .about {
+    max-width: 500px;
+    margin: 15px;
+  }
+  .about{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 700px;
+  }
+  
+  /* 1980px ve üzeri ekranlarda yan yana sıralama */
+  @media screen and (min-width: 1980px) {
+    .profile-card,
+    .about {
+      width: 40%;
+    }
+  }
+  
+  /* 720px ve altındaki ekranlarda alt alta sıralama */
+  @media screen and (max-width: 720px) {
+    .ab-container {
+      flex-direction: column;
+    }
+  
+    .profile-card,
+    .about {
+      width: 100%;
+    }
+  
+    /* 720px'de about'ı sağa yasla ve sol/sağ boşlukları ayarla */
+    .about {
+      margin-left: 0;
+      margin-right: 15px; /* Update: Right margin to 15px */
+    }
+  }
+  
+.profile-card{
+    background: rgba( 255, 255, 255, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.60 );
+   -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    width: 400px;
+    padding: 3rem;
+    min-height: 300px;
+    position: relative;
+    color: #fff;
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+    
+}
+.profile-card .profile-img{
+    margin-top: 15px;
+    overflow: hidden;
+}
+.profile-card .profile-img img{
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+}
+.profile-card .profile-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.profile-details .intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.profile-details .intro h2{
+    font-family: 'Comfortaa', sans-serif;
+    margin-top: 20px;
+    color: #707070;
+}
+.profile-details .intro h4{
+   font-family: 'Comfortaa', sans-serif;
+   color: #707070;
+   font-weight: 400;
+   border-radius: 4px;
+   padding: 5px 10px;
+   margin: 8px;
+}
+.profile-details .intro .social{
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.profile-details .intro .social i{
+    color: #707070;
+    font-size: 16px;
+    background-color: #fff;
+    margin: 5px;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.profile-details .intro .social i:hover{
+    transform: scale(1.2);
+    border: 1px solid #707070;
+}
+.profile-card .contact-info{
+    color: black;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+}
+.profile-details .contact-info .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+.contact-info .row .icon{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: #111;
+    text-align: center;
+    color: #fff;
+    transition: 0.5s;
+}
+.row .icon:hover{
+    transform: scale(1.2);
+    border: 1px solid #707070;
+}
+.row .content{
+    min-width: 70%;
+}
+.row .content span{
+    font-size: 15px;
+}
+
+.about{
+    font-family: 'Comfortaa', sans-serif;
+    background: rgba( 255, 255, 255, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.60 );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    max-width: 1200px;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+}
+.about h1{
+    color: #707070;
+    margin-bottom: 1.1rem;
+    position: relative;
+    display: inline-block;
+    font-size: 3.5rem;
+}
+.about h2{
+    color: #707070;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+.about p{
+    color: black;
+    margin: 1.5rem 0;
+}
+.about .work .workbox .icon img{
+    width: 50px;
+    height: 50px;
+}
+.about .work{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+/* .work .workbox{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 1px solid #707070;
+    padding: 1rem;
+    margin: 1rem;
+}
+.work .workbox .desc{
+    width: 75%;
+    color: #555;
+}
+.work .workbox .desc h3{
+    color: #808080;
+    margin-bottom: 3px;
+}
+.work .workbox .desc p{
+    margin: 0px;
+} */
+/* @media screen and (max-width:768px) {
+    .about{
+        width: 100%;
+        max-width: 400px;
+        padding: 1rem;
+        margin: 1rem;
+    }
+    .about h1{
+        font-size: 2.2rem;
+    }
+    .about .work{
+        grid-template-columns: repeat(1.1fr);
+        grid-template-rows: repeat(4,auto);
+    }
+    
+} */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Flexbox ile ilgili stiller */
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-row > section {
+    flex: 3 3 auto;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .flex-row {
+        flex-direction: column;
+    }
+    
+    .flex-row > section {
+        margin-right: 0;
+    }
+}
+
+/* Ek stiller */
+
+.egitim h4,
+.calisma-gecmisi h3,
+.referanslar h3,
+.sertifikalar h3 {
+    font-weight: bold;
+}
+
+.calisma-gecmisi ul li ul {
+    margin-left: 20px;
+}
